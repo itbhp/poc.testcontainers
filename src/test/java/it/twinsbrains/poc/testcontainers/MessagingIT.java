@@ -29,7 +29,7 @@ public class MessagingIT {
       );
 
   @DynamicPropertySource
-  static void neo4jProperties(DynamicPropertyRegistry registry) {
+  static void properties(DynamicPropertyRegistry registry) {
     registry.add("spring.rabbitmq.port", () -> rabbitMQContainer.getMappedPort(5672));
   }
 
