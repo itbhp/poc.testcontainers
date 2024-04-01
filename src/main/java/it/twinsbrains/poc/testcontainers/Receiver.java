@@ -9,7 +9,7 @@ import java.util.concurrent.atomic.AtomicReference;
 @SuppressWarnings("unused")
 public class Receiver {
 
-    private AtomicReference<CountDownLatch> latch = new AtomicReference<>(new CountDownLatch(1));
+    private final AtomicReference<CountDownLatch> latch = new AtomicReference<>(new CountDownLatch(1));
 
     public void receiveMessage(String message) {
         System.out.println("Received <" + message + ">");
